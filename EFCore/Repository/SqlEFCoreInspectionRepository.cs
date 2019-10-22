@@ -21,6 +21,8 @@ namespace EFCore.Repository
         void SkipAndTakeInspection(int skip, int take);
 
         void OtherExampleOfLeftJoin();
+
+        void UpdateFromView(int contactId, string email);
     }
 
     public class SqlEfCoreInspectionRepository : IInspectionRepository
@@ -218,6 +220,24 @@ namespace EFCore.Repository
             }
         }
 
+
+        public void UpdateFromView(int contactId,string email)
+        {
+
+            using (var db = new EfContext())
+            {
+                var retrieveInspectionPoco = db.StadiumContactsDbSet.Find(contactId);
+
+                retrieveInspectionPoco.Email = email;
+
+
+                db.SaveChanges();
+            }
+
+
+
+        }
+
         private static void DisplayStates(IEnumerable<EntityEntry> entries)
         {
             foreach (var entry in entries)
@@ -249,6 +269,9 @@ namespace EFCore.Repository
 
             };
         }
+
+
+
 
 
         //var student = new Student()

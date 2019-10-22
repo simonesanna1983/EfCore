@@ -125,6 +125,14 @@ namespace Tests
         }
 
 
+        [TestCase(1057, "efCoreTest@efCoreTest.it")]  // do update
+        public void UpdateFromView(int contactId, string email)
+        {
+            var inspectionRepository = _service.GetSqlEfCoreInspectionRepository();
+
+            inspectionRepository.UpdateFromView(contactId, email);
+
+        }
 
 
     }

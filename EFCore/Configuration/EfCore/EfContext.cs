@@ -68,6 +68,8 @@ namespace EFCore.Configuration.EfCore
         public DbSet<VenuePoco> VenueDbSet { get; set; }
         public DbSet<DesignationPoco> DesignationDbSet { get; set; }
         public DbSet<UserPoco> UserDbSet { get; set; }
+        public DbSet<StadiumContactsPoco> StadiumContactsDbSet { get; set; }
+
 
         //public EfContext(DbContextOptions<EfContext> options)
         //    : base(options)
