@@ -12,28 +12,22 @@ namespace EFCore.Poco.Examples
         {
 
 
-            /*  using (var db = new Student())
-              {
-                  var student = new .Student()
-                  { //Root entity (with key value)
-                      Id = 1,
-                      Name = "Bill",
-                      Address = new .StudentAddress()  //Child entity (with key value)
-                      {
-                          StudentAddressId = 1,
-                          City = "Seattle",
-                          Country = "USA"
-                      },
-                      StudentCourses = new List<ManyToMany.StudentCourse>() {
-                          new ManyToMany.StudentCourse(){  Course = new ManyToMany.Course(){ CourseName="Machine Language" } },//Child entity (empty key)
-                          new ManyToMany.StudentCourse(){  Course = new ManyToMany.Course(){  CourseId=2 } } //Child entity (with key value)
-                      }
-                  };
-            
-                  db.SaveChanges();
-              }
+            //using (var db = new ManyToMany.Student())
+            //{
+            //    var student = new ManyToMany.Student()
+            //      { //Root entity (with key value)
+            //          StudentId = 1,
+            //          Name = "Bill",
+            //          StudentCourses = new List<ManyToMany.StudentCourse>() {
+            //              new ManyToMany.StudentCourse(){  Course = new ManyToMany.Course(){ CourseName="Machine Language" } },//Child entity (empty key)
+            //              new ManyToMany.StudentCourse(){  Course = new ManyToMany.Course(){  CourseId=2 } } //Child entity (with key value)
+            //          }
+            //      };
 
-            */
+            //    db.SaveChanges();
+            //}
+
+
 
             /*
 

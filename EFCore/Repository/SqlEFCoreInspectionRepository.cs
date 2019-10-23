@@ -23,6 +23,8 @@ namespace EFCore.Repository
         void OtherExampleOfLeftJoin();
 
         void UpdateFromView(int contactId, string email);
+
+        void RemoveSpecificItem(int inspectionId);
     }
 
     public class SqlEfCoreInspectionRepository : IInspectionRepository
@@ -234,8 +236,16 @@ namespace EFCore.Repository
                 db.SaveChanges();
             }
 
+        }
 
 
+        public void RemoveSpecificItem(int inspectionId)
+        {
+            using (var db = new EfContext())
+            {
+                db.InspectionDbSet.Remove(new InspectionPoco() { InspectionId = inspectionId});
+                db.SaveChanges();
+            }
         }
 
         private static void DisplayStates(IEnumerable<EntityEntry> entries)
