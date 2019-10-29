@@ -135,7 +135,7 @@ namespace Tests
         }
 
 
-        [TestCase(688)]  
+        [TestCase(692)]  
         public void RemoveSpecificItem(int inspectionId)
         {
             var inspectionRepository = _service.GetSqlEfCoreInspectionRepository();
