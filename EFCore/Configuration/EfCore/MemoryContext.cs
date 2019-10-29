@@ -23,6 +23,7 @@ namespace EFCore.Configuration.EfCore
 
 
 
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //modelBuilder.Query<InspectionPoco>().ToQuery(() =>
