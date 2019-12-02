@@ -77,7 +77,7 @@ namespace EFCore.Configuration.EfCore
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=si-fdpr-03\football;Initial Catalog=SMS;Persist Security Info=True;User ID=sa;Password=sharm;MultipleActiveResultSets=True");
+            optionsBuilder.UseSqlServer(@"Server=yourDatabase;Initial Catalog=SMS;Persist Security Info=True;User ID=sa;Password=sharm;MultipleActiveResultSets=True");
             //ChangeTracker.AutoDetectChangesEnabled = false;
 
 
