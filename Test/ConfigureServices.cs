@@ -34,8 +34,6 @@ namespace Test
             CheckEfCoreRegistration();
 
 
-            //_service.AddDbContext<EfContext>(options => 
-            //    options.UseSqlServer(@"Server=SI-FDPR-03\FOOTBALL;Initial Catalog=SMS;Persist Security Info=True;User ID=sa;Password=sharm;MultipleActiveResultSets=True"));
 
             var context = new EfContext();
             _provider = _service.BuildServiceProvider();
